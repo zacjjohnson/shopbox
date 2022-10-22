@@ -1,0 +1,51 @@
+
+
+<div class="content-container">
+
+   <div class="createContent">
+
+<h1>Update Book Details</h1>
+
+
+<form action="/books/edit/{{id}}" method="POST">
+   <label> Title: <br>
+      <input type="text" name="title" value="{{this.title}}">
+   </label>
+
+   <br><br>
+
+   <label> Author: <br>
+      <input type="text" name="author" value="{{this.author}}">
+   </label>
+
+   <br><br>
+
+   <label> Number of Pages: <br>
+      <input type="text" name="pages" value="{{this.pages}}">
+   </label>
+
+   <br><br>
+
+   <label> Price: <br>
+      <input type="text" name="price" value="{{this.price}}">
+   </label>
+
+   <br><br>
+
+   <label> Genre: <br>
+      <input type="text" name="genre" value="{{this.genre}}">
+   </label>
+
+   <br><br>
+
+   <label> Inventory: <br>
+      <input type="text" name="inventory" value="{{this.inventory}}">
+   </label>
+
+   <br><br>
+
+   <button>Update</button>
+</form>
+
+   </div>
+</div>

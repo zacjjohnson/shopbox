@@ -1,0 +1,43 @@
+{{#if currentUser}}
+<main class="content">
+    <div class="page-heading">
+        <h1>Customers List</h1>
+        <button class="add-new-customer-btn"><a href="/customers/create">Add New Customer</a></button>
+    </div>
+
+    <div class="page-list-heading">
+        
+        <div class="list-head" id="name">
+            <p>Name</p>
+        </div>
+
+        <div class="list-head" id="email">
+            <p>Email</p>
+        </div>
+
+        <div class="list-head">
+            <p> </p>
+        </div>
+
+    </div>
+
+    {{#each customers}}
+    <div class="list-actual-display">
+
+        <div class="actual1">
+            <p>{{firstName}} {{lastName}}</p>
+        </div>
+
+        <div class="actual2">
+            <p>{{email}}</p>
+        </div>
+
+        <div class="actual3">
+            <p><a class="details-link" href="/customers/{{_id}}">See customer information</a></p>
+        </div> 
+
+    </div>
+{{/each}}
+    
+</main>
+{{/if}}

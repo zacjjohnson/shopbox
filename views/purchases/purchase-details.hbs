@@ -1,0 +1,41 @@
+{{#if currentUser}}
+<main class="content">
+    
+    <div class="page-heading">
+        <h1>Purchase Details for: {{customers.firstName}} {{customers.lastName}}</h1>
+        <p> <a class="back-link" href="/purchases">Back to purchases</a> </p>
+    </div>
+
+    <div class="details-container">
+
+        <div class="details-info-box">
+            <p class="p-detail-heading"> <span>Purchase ID:</span> <br>{{_id}}</p>
+            <p class="p-detail-heading"> <span>Invoice#:</span> <br>{{invoiceId}}</p>
+            <p class="p-detail-heading"> <span>Customer:</span> <br>{{customers.firstName}} {{customers.lastName}}</p>
+            <p class="p-detail-heading"> <span>Purchase Date:</span> <br>{{invoiceDate}}</p>
+
+            {{!-- {{#each books}} --}}
+                <p class="p-detail-heading"> <span>Books purchased:</span> <br>{{books.title}} - ${{books.price}}</p>
+                <p class="p-detail-heading"> <span>Movies purchased:</span> <br>{{movies.title}} - ${{movies.price}}</p>
+            {{!-- {{/each}} --}}
+
+            {{!-- {{#each movies}}
+
+            {{/each}} --}}
+
+            <p class="p-detail-heading"> <span>Total:</span> <br>{{purchaseTotal}}</p>
+            
+        </div>
+
+        <div class="detail-btns">
+
+            <form action="/purchases/delete/{{_id}}" method="POST">
+                <button class="delete-btn">Delete purchase</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</main>
+{{/if}}

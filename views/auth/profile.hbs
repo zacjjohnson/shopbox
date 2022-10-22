@@ -1,0 +1,40 @@
+{{#if currentUser}}
+<main class="content">
+
+    <div class="page-heading">
+        <h1>Profile</h1>
+    </div>
+
+    <div class="details-container">
+
+        <div class="details-info-box">
+            <p class="p-detail-heading"> <span>Name:</span> <br>{{user.firstName}} {{user.lastName}} </p>
+
+            <p class="p-detail-heading"> <span>Address:</span> <br>
+                {{user.address}}, Suite#: {{user.unitNumber}} <br>
+                {{user.city}}, {{user.state}}, {{user.zip}} 
+            </p>
+
+            <p class="p-detail-heading"> <span>Email:</span> <br>{{user.email}} </p>
+
+            <p class="p-detail-heading"> <span>Access level:</span> <br>{{user.role}} </p>
+
+            <p class="p-detail-heading"> <span>Store type:</span> <br>{{user.storeType}} </p>
+        </div>
+
+    </div>
+
+    <div class="profile-btns-div">
+
+        <button class="update-profile-btn">
+            <a href="/auth/update-profile/{{user.id}}">Update your profile</a>
+        </button>
+
+        <button class="change-password-btn">
+            <a href="/auth/change-password">Change Password</a>
+        </button>
+
+    </div>
+
+</main>
+{{/if}}

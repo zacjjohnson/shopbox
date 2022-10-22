@@ -1,0 +1,46 @@
+
+
+{{#if currentUser}}
+<main class="content">
+    <div class="page-heading">
+        <h1>Book List</h1>
+        <button><a href="/books/createBook">Add New Book</a></button>
+    </div>
+
+    <div class="page-list-heading">
+        <div class="list-head" id="title">
+            <p>Title</p>
+        </div>
+        <div class="list-head" id="author">
+            <p>Author</p>
+        </div>
+        <div class="list-head">
+            <p> </p>
+        </div>
+    </div>
+   
+
+    {{#each book}}
+    <div class="list-actual-display">
+        <div class="actual1">
+            <p>{{title}}</p>
+        </div>
+
+        <div class="actual2">
+            <p>{{author}}</p>
+        </div>
+
+        <div class="actual3">
+            <p><a class="details-link" href="/books/details/{{_id}}">See book details</a></p>
+        </div> 
+
+    </div>
+{{/each}}
+    
+
+</main>
+
+
+<br>
+
+{{/if}}

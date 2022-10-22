@@ -1,0 +1,39 @@
+{{#if currentUser}}
+
+<div class="new-customer-container">
+
+   <div class="new-customer-formBox">
+
+      <h1>Add A New Customer</h1>
+
+      <br>
+
+      <form action="/customers/create" method="POST">
+         <input class="nameInput" type="text" name="firstName" placeholder="First Name">
+         <input class="nameInput" type="text" name="lastName" placeholder="Last Name">
+
+         <br><br>
+
+         <input class="emailInput" type="text" name="email" placeholder="Email">
+
+         <br><br>
+
+         <input class="addressInput" type="text" name="address" placeholder="Address">
+         <input class="apartNumInput" type="text" name="apartmentNumber" placeholder="Apt Number">
+
+         <br><br>
+
+         <input class="cityInput" type="text" name="city" placeholder="City">
+         <input class="stateInput" type="text" name="state" placeholder="State">
+         <input class="zipInput" type="number" name="zip" placeholder="Zip Code">
+
+         <br><br>
+
+         <button class="add-new-customer-btn" type="submit">Add New Customer</button>
+      </form>
+
+   </div>
+
+</div>
+
+{{/if}}

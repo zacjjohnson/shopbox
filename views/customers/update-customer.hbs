@@ -1,0 +1,40 @@
+{{#if currentUser}}
+
+<div class="update-customer-container">
+
+   <div class="update-customer-formBox">
+
+      <h1>Update Customer Information</h1>
+
+      <br>
+
+      <form action="/customers/{{id}}" method="POST">
+            
+            <input class="nameInput" placeholder="First Name" type="text" name="firstName" value="{{firstName}}">
+            <input class="nameInput" placeholder="Last Name" type="text" name="lastName" value="{{lastName}}">
+
+         <br><br>
+
+         <input class="emailInput" placeholder="Email" type="text" name="email" value="{{email}}">
+
+         <br><br>
+
+         <input class="addressInput" placeholder="Address" type="text" name="address" value="{{address}}">
+         <input class="apartNumInput" placeholder="Apartment #" type="text" name="apartmentNumber" value="{{apartmentNumber}}">
+
+         <br><br>
+
+         <input class="cityInput" placeholder="City" type="text" name="city" value="{{city}}">
+         <input class="stateInput" placeholder="State" type="text" name="state" value="{{state}}">
+         <input class="zipInput" placeholder="Zip" type="number" name="zip" value="{{zip}}">
+
+         <br><br>
+
+         <button class="update-customer-btn" type="submit">Update Customer</button>
+      </form>
+
+   </div>
+
+</div>
+
+{{/if}}

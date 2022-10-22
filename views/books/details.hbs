@@ -1,0 +1,35 @@
+{{#if currentUser}}
+<main class="content">
+
+<div class="page-heading">
+    <h1>{{title}}</h1>
+    <p> <a class="back-link" href="/books">Back to books list</a> </p>
+</div>
+
+<div class="details-container">
+
+    <div class="details-info-box">
+
+    <p class="p-detail-heading"><span>Author:</span><br> {{author}}</p>
+    <p class="p-detail-heading"><span>Pages:</span><br> {{pages}}</p>
+    <p class="p-detail-heading"><span>Genre:</span><br> {{genre}}</p>
+    <p class="p-detail-heading"><span>Price:</span><br> ${{price}}</p>
+
+    </div>
+
+</div>
+    
+    <div class="detail-btns">
+
+    <button class="edit-book-btn"><a href="/books/edit/{{_id}}">Edit This Book</a></button>
+    <br>
+     <form action="/books/delete/{{_id}}" method="POST">
+        <button class="delete-btn">Delete</button>
+    </form>
+    </div>
+
+</main>
+
+
+{{/if}}
+

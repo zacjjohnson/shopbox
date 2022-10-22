@@ -1,0 +1,45 @@
+
+
+{{#if currentUser}}
+<main class="content">
+    <div class="page-heading">
+        <h1>Movie List</h1>
+        <button><a href="/movies/createMovie">Add New Movie</a></button>
+    </div>
+
+    <div class="page-list-heading">
+        <div class="list-head" id="title">
+            <p>Title</p>
+        </div>
+        <div class="list-head" id="genre">
+            <p>Genre</p>
+        </div>
+        <div class="list-head">
+            <p> </p>
+        </div>
+    </div>
+
+    {{#each movie}}
+    <div class="list-actual-display">
+        <div class="actual1">
+            <p>{{title}}</p>
+        </div>
+
+        <div class="actual2">
+            <p>{{genre}}</p>
+        </div>
+
+        <div class="actual3">
+            <p><a class="details-link" href="/movies/details/{{_id}}">See movie details</a></p>
+        </div> 
+
+    </div>
+{{/each}}
+    
+
+</main>
+
+
+<br>
+
+{{/if}}

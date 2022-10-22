@@ -1,0 +1,37 @@
+
+
+{{#if currentUser}}
+<main class="content">
+
+<div class="page-heading">
+    <h1>{{title}}</h1>
+    <p> <a class="back-link" href="/movies">Back to movies list</a> </p>
+</div>
+
+<div class="details-container">
+
+    <div class="details-info-box">
+
+    <p class="p-detail-heading"><span>Director:</span><br> {{director}}</p>
+    <p class="p-detail-heading"><span>Runtime:</span><br> {{runtime}}</p>
+    <p class="p-detail-heading"><span>Genre:</span><br> {{genre}}</p>
+    <p class="p-detail-heading"><span>Price:</span><br> ${{price}}</p>
+    <p class="p-detail-heading"><span>Rating:</span><br> {{rating}}</p>
+
+    </div>
+
+</div>
+    
+    <div class="detail-btns">
+
+    <button class="edit-movie-btn"><a href="/movies/edit/{{_id}}" >Edit This Movie</a></button>
+    <br>
+     <form action="/movies/delete/{{_id}}" method="POST">
+        <button class="delete-btn">Delete</button>
+    </form>
+    </div>
+
+</main>
+
+
+{{/if}}

@@ -1,0 +1,242 @@
+/* ======= CUSTOMER AND PURCHASE LIST VIEW STYLES ======== */
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.page-heading {
+    margin: 0 0 40px 0;
+}
+
+.page-list-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list-head p {
+    width: 200px;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.list-actual-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+.list-actual-display p {
+    font-size: 1.1em;
+}
+
+.actual1, .actual2, .actual3 {
+    width: 200px;
+}
+
+.details-link {
+    color: #006AFF;
+}
+
+/* ========== All Button Styles ========== */
+
+.detail-btns {
+    margin-top: 15px
+}
+
+.update-customer-btn, .add-new-customer-btn, .new-invoice-btn, .save-invoice-btn, .edit-movie-btn, .edit-book-btn {
+    border-radius: 3px;
+    border: 1px solid #006AFF;
+    padding: 10px;
+    width: 11rem;
+    background-color: #006AFF;
+    font-size: 1.1em;
+    color: white;
+    margin-top: 15px;
+  }
+
+  .delete-btn {
+    border-radius: 3px;
+    border: 2px solid #ed2e2e;
+    padding: 10px;
+    width: 11rem;
+    background-color: #ff00002e;
+    font-size: 1.1em;
+    font-weight: 900;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+}
+
+  button a {
+    color: white;
+  }
+
+/* ======= CUSTOMER DETAIL VIEW STYLES ======== */
+
+.back-link {
+    color: #006AFF;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.p-detail-heading {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+span {
+    font-weight: 900;
+}
+
+
+  /* ========== CUSTOMER AND PURCHASE CREATE/UPDATE FORMS =========== */
+
+.new-customer-container, .update-customer-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    padding-bottom: 3rem;
+}
+  
+.new-customer-container.update-customer-container h1{
+    color: black;
+}
+  
+.new-customer-formBox, .update-customer-formBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    padding: 2rem;
+    width: 600px;
+    background-color: white;
+}
+  
+.nameInput {
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 17rem;
+    height: 3.5rem;
+}
+  
+.emailInput {
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 35rem;
+    height: 3.5rem;
+}
+
+.addressInput {
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 27rem;
+    height: 3.5rem;
+}
+
+.apartNumInput {
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 7rem;
+    height: 3.5rem;
+}
+
+.cityInput {
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 13rem;
+    height: 3.5rem;
+}
+
+.stateInput {
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 13rem;
+    height: 3.5rem;
+}
+
+.zipInput {
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 7rem;
+    height: 3.5rem;
+}
+
+/* ===== New Inoice */
+
+.new-invoice-container {
+    display: flex;
+    justify-content: center;
+}
+
+.new-invoice-input{
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 25rem;
+    height: 3rem;
+}
+
+.invoice-total-input{
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 11rem;
+    height: 3rem;
+}
+
+/* ========= ALL HOVER STYLES ========= */
+/* ====== Input hovers */
+.new-invoice-input:hover {border: 1px solid #005AFF;}
+.nameInput:hover {border: 1px solid #005AFF;}
+.emailInput:hover {border: 1px solid #005AFF;}
+.addressInput:hover {border: 1px solid #005AFF;}
+.apartNumInput:hover {border: 1px solid #005AFF;}
+.cityInput:hover {border: 1px solid #005AFF;}
+.stateInput:hover {border: 1px solid #005AFF;}
+.zipInput:hover {border: 1px solid #005AFF;}
+/* ====== Button hovers */
+.add-new-customer-btn:hover {background-color: #005AD9;}
+.update-customer-btn:hover {background-color: #005AD9;}
+.new-invoice-btn:hover {background-color: #005AD9;}
+.save-invoice-btn:hover {background-color: #005AD9;}
+.edit-movie-btn:hover {background-color: #005AD9;}
+.edit-book-btn:hover {background-color: #005AD9;}
+/* ====== Text link hovers */
+.details-link:hover {color: #005AD9;}
+.back-link:hover {color: #005AD9;}
+
+.delete-btn:hover {
+    border-radius: 3px;
+    border: 2px solid #ff0000;
+    padding: 10px;
+    width: 11rem;
+    background-color: #ff7700;
+    font-size: 1.1em;
+    font-weight: 900;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+}

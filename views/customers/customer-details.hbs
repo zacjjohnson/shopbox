@@ -1,0 +1,43 @@
+{{#if currentUser}}
+<main class="content">
+    
+    <div class="page-heading">
+        <h1>Customer Information</h1>
+        <p> <a class="back-link" href="/customers">Back to customers list</a> </p>
+    </div>
+
+    <div class="details-container">
+
+        <div class="details-info-box">
+            <p class="p-detail-heading"> <span>Name:</span> <br>{{firstName}} {{lastName}} </p>
+
+            <p class="p-detail-heading"> <span>Email:</span> <br>{{email}} </p>
+
+            <p class="p-detail-heading">
+                <span>Address:</span> <br>
+                {{address}}, Apt#: {{apartmentNumber}} <br>
+                {{city}}, {{state}}, {{zip}} 
+            </p>
+
+            <p class="p-detail-heading"> <span>Purchases:</span> </p>
+            <ul>
+                {{#each purchases}}
+                    <li class="p-detail-heading"> <a class="details-link" href="/purchases/{{_id}}">View purchase {{_id}}</a> </li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="detail-btns">
+
+            <button class="update-customer-btn"> <a href="/customers/{{_id}}/update-customer">Update customer info</a> </button>
+
+            <form action="/customers/delete/{{_id}}" method="POST">
+                <button class="delete-btn">Delete this customer</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</main>
+{{/if}}

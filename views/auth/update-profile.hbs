@@ -1,0 +1,46 @@
+
+
+<div class="update-profile-container">
+
+    <div class="update-profile-form-box">
+
+        <h1>Update Profile</h1>
+        <br>
+
+        <form action="/auth/update-profile/{{user._id}}" method="POST">
+
+            <input class="email-input" type="text" name="email" value="{{user.email}}" placeholder="Enter new email address">
+
+            <br><br>
+
+            <label for="storeType">How do you sell? (current Selection -- {{user.storeType}})</label><br>
+            <select name="storeType" id="storeType">
+                <option value="true" selected>{{user.storeType}}</option>
+                <option value="ONLINE STORE">Online store only</option>
+                <option value="PHYSICAL STORE">Physical store only</option>
+                <option value="ONLINE AND PHYSICAL STORE">I sell from a physical and online store</option>
+            </select>
+
+            <br><br>
+
+            <input class="address-input" type="text" name="address" value="{{user.address}}" placeholder="Address:">
+
+            <input class="unitNum-input" type="text" name="unitNumber" value="{{user.unitNumber}}" placeholder="Unit/Suite#">
+
+            <br><br>
+
+            <input class="city-input" type="text" name="city" value="{{user.city}}" placeholder="City">
+
+            <input class="state-input" type="text" name="state" value="{{user.state}}" placeholder="State">
+
+            <input class="zip-input" type="text" name="zip" value="{{user.zip}}" placeholder="Zip">
+
+            <br><br>
+            
+            <button type="submit">Save Changes</button>
+
+        </form>
+</div>
+
+
+</div>

@@ -1,0 +1,57 @@
+
+
+<div class="signup-container">
+
+
+   <div class="signupContent">
+      
+      <h1>Create Account</h1>
+      <br>
+
+      <form action="/auth/signup" method="POST">
+
+         <input class="nameInput" type="text" name="firstName" placeholder="First Name">
+
+         <input class="nameInput" type="text" name="lastName" placeholder="Last Name">
+
+         <br><br>
+
+         <input class="email-pw-input" type="text" name="email" placeholder="Email">
+
+         <br><br>
+
+         <input class="email-pw-input" type="password" name="password" placeholder="Password">
+
+         <br><br>
+
+         <label for="storeType">How do you sell?</label> <br>
+         <select name="storeType" id="storeType">
+            <option value="" disabled="disabled" selected="selected">--Please choose an option--</option>
+            <option value="ONLINE STORE">Online store only</option>
+            <option value="PHYSICAL STORE">Physical store only</option>
+            <option value="ONLINE AND PHYSICAL STORE">I sell from a physical and online store</option>
+         </select>
+
+         <br><br>
+
+         <label for="role">Assign access level:</label> <br>
+         <select name="role" id="role">
+            <option value="" disabled="disabled" selected="selected">--Please choose an option--</option>
+            <option value="ADMIN">Admin</option>
+            <option value="STAFF">Staff</option>
+         </select>
+
+         <br><br>
+
+         <button type="submit">Submit</button>
+
+      </form>
+
+      {{#if errorMessage}}
+         {{errorMessage}}
+      {{/if}}
+
+   </div>
+
+</div>
+

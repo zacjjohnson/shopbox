@@ -1,0 +1,312 @@
+input {
+  font-size: 1.2em;
+}
+
+/* ======== SIGNUP FORM ======== */
+
+.signup-container, .update-profile-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    padding-bottom: 3rem;
+}
+  
+.signup-container h1{
+    color: black;
+}
+  
+.signupContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    padding: 2rem;
+    width: 600px;
+    background-color: white;
+}
+  
+.signupContent .nameInput{
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 17rem;
+    height: 3.5rem;
+}
+  
+.signupContent .email-pw-input{
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+    margin: 0 12px 0 0;
+    width: 35rem;
+    height: 3.5rem;
+}
+  
+.signupContent .email-pw-input:hover {
+    border: 1px solid #005AFF;
+}
+  
+.signupContent .nameInput:hover {
+    border: 1px solid #005AFF;
+}
+  
+  select {
+    border-radius: 2px;
+    width: 15rem;
+    height: 2rem;
+    margin-top: 5px;
+  }
+  
+  select:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .signupContent button {
+    border-radius: 3px;
+    border: 1px solid #005AFF;
+    padding: 10px;
+    width: 5rem;
+    background-color: #005AFF;
+    color: white;
+    font-size: 1.1em;
+    margin-top: 15px;
+  }
+  
+  .signupContent button:hover {
+    background-color: #005AD9;
+  }
+  
+  /* ========= LOGIN FORM ========= */
+  
+  .logIn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    width: 100%;
+  }
+  
+  .logIn-container a {
+    color: #005AD9;
+  }
+  
+  .logIn-container input {
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 30rem;
+    height: 3.8rem;
+  }
+  
+  .logIn-container input:hover {
+    border: 1px solid #005AFF;
+  }
+  
+  .loginContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+  
+  .logIn-container button {
+    border-radius: 3px;
+    border: 1px solid #005AFF;
+    padding: 10px;
+    width: 5rem;
+    background-color: #005AFF;
+    color: white;
+    font-size: 1.1em;
+  }
+  
+  .logIn-container button:hover {
+    background-color: #005AD9;
+  }
+  
+  .loginItems {
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .loginItems a{
+    display: flex;
+    padding-left: 15px;
+    color: rgb(86, 86, 86);
+  }
+  
+/* ====== CHANGE PASSWORD */
+.changePW-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    width: 100%;
+}
+
+.pass-input input {
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 30rem;
+  height: 3.8rem;
+}
+
+.pass-input input:hover {
+  border: 1px solid #005AFF;
+}
+
+.changePW-box button {
+  border-radius: 3px;
+  border: 1px solid #005AFF;
+  padding: 10px;
+  width: 5rem;
+  background-color: #005AFF;
+  color: white;
+  font-size: 1.1em;
+}
+
+.changePW-box button:hover {
+  background-color: #005AD9;
+}
+
+.profile-btns-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.update-profile-btn {
+  border-radius: 3px;
+  border: 1px solid #006AFF;
+  padding: 10px;
+  width: 11rem;
+  background-color: #006AFF;
+  font-size: 1.1em;
+  color: white;
+  margin-top: 15px;
+}
+
+.change-password-btn {
+  border-radius: 3px;
+  border: 1px solid #0c1832;
+  padding: 10px;
+  width: 11rem;
+  background-color: #0c1832;
+  font-size: 1.1em;
+  color: white;
+  margin-top: 15px;
+}
+
+.update-profile-btn:hover {background-color: #005AD9;}
+.change-password-btn:hover {background-color: #0e4365;}
+
+
+/* ====== UPDATE PROFILE */
+
+.update-profile-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+}
+
+.update-profile-form-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  padding: 2rem;
+  width: 600px;
+  background-color: white;
+}
+
+.update-profile-form-box .email-input{
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  margin: 0 12px 0 0;
+  width: 35rem;
+  height: 3.5rem;
+}
+
+.update-profile-form-box .address-input {
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  margin: 0 12px 0 0;
+  width: 27rem;
+  height: 3.5rem;
+}
+
+.update-profile-form-box .unitNum-input {
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  margin: 0 12px 0 0;
+  width: 7rem;
+  height: 3.5rem;
+}
+
+.update-profile-form-box .city-input {
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  margin: 0 12px 0 0;
+  width: 13rem;
+  height: 3.5rem;
+}
+
+.update-profile-form-box .state-input {
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  margin: 0 12px 0 0;
+  width: 13rem;
+  height: 3.5rem;
+}
+
+.update-profile-form-box .zip-input {
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  margin: 0 12px 0 0;
+  width: 7rem;
+  height: 3.5rem;
+}
+
+.update-profile-form-box button {
+  border-radius: 3px;
+  border: 1px solid #006AFF;
+  padding: 10px;
+  width: 11rem;
+  background-color: #006AFF;
+  font-size: 1.1em;
+  color: white;
+  margin-top: 15px;
+}
+.update-profile-form-box button:hover {background-color: #005AD9;}
+
+.email-input:hover {border: 1px solid #005AFF;}
+.address-input:hover {border: 1px solid #005AFF;}
+.unitNum-input:hover {border: 1px solid #005AFF;}
+.city-input:hover {border: 1px solid #005AFF;}
+.state-input:hover {border: 1px solid #005AFF;}
+.zip-input:hover {border: 1px solid #005AFF;}
+

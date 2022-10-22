@@ -1,0 +1,72 @@
+{{#if currentUser}}
+
+<div class="new-invoice-container">
+
+    <div class="new-invoice-formBox">
+
+        <h1>New Invoice</h1>
+
+        <form action="/purchases/create" method="POST">
+
+            {{!-- <label>Customer: </label><br> --}}
+            <select class="new-invoice-input" name="customer" id="select">
+                <option value="" disabled="disabled" selected="selected">--Select a customer--</option>
+                {{#each customers}}
+                    <option value="{{_id}}">{{firstName}} {{lastName}} </option>
+                {{/each}}
+            </select>
+
+            <br><br>
+
+            <label> <span>Create an invoice ID:</span> <br>
+                <input class="new-invoice-input" type="text" name="invoiceId" placeholder="ex: 001">
+            </label>
+
+            <br><br>
+
+            <label> <span>Order date:</span> <br>
+                <input class="new-invoice-input" type="date" name="invoiceDate">
+            </label>
+
+            <br><br>
+
+            <select class="new-invoice-input" name="books" id="selectBook">
+                <option class="disabled" value="" disabled="disabled" selected="selected">--Choose  a book--</option>
+                {{#each books}}
+                    <option value="{{_id}}" data-price="{{price}}" class="selectBook">{{title}} ${{price}}</option>
+                {{/each}}
+            </select>
+
+            <br><br>
+
+            <select class="new-invoice-input" name="movies" id="selectMovie">
+                <option value="" disabled="disabled" selected="selected">--Choose a movie--</option>
+                {{#each movies}}
+                    <option value="{{_id}}" data-price="{{price}}" class="selectMovie">{{title}} ${{price}}</option>
+                {{/each}}
+            </select>
+
+            <br><br>
+
+            <label> <span>Select a payment type:</span> </label> <br>
+            <input class="radio" type="radio" name="paymentMethod" value="Credit or debit card">Credit or debit card</input> <br>
+            <input class="radio" type="radio" name="paymentMethod" value="Gift card">Gift card</input> <br>
+            <input class="radio" type="radio" name="paymentMethod" value="Cash">Cash</input> <br>
+            
+
+            <br><br>
+
+            <label> <span>Purchase Total:</span> <br>
+                <input id="totalPrice" class="invoice-total-input" type="text" name="purchaseTotal" value="">
+            </label>
+
+            <br><br>
+            
+            <button class="save-invoice-btn" type="submit">Save Invoice</button>
+
+        </form>
+
+    </div>
+    
+</div>
+{{/if}}

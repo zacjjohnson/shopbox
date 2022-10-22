@@ -1,0 +1,69 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{appTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/customers-purchases-pages.css" />
+    <link rel="stylesheet" href="/stylesheets/login-signup-forms.css" />
+    <link rel="stylesheet" href="/stylesheets/bookAndMovie.css">
+  </head>
+
+  <body>
+
+    <nav>
+
+      {{!-- <div class="navigationItems">
+        <a class="homeLink" href="/"> <img src="/images/logo.png" alt="logo"> <b>Shopbox</b></a>
+      </div> --}}
+
+      <div class="navigationItems">
+        <a class="homeLink" href="/"> <img src="/images/logo.png" alt="logo"><b>Shopbox</b></a>
+
+        {{#unless currentUser}}
+          <a class="navText-link-hover" href="#"> <b>Products</b></a>
+          <a class="navText-link-hover" href="#"> <b>Business Types</b></a>
+          <a class="navText-link-hover" href="#"> <b>Why Shopbox?</b></a>
+          <a class="navText-link-hover" href="#"> <b>Pricing</b></a>
+          <a class="navText-link-hover" href="#"> <b>Resources</b></a>
+        {{/unless}}
+
+        {{#if currentUser}}
+          <a class="navText-link-hover" href="/customers">Customers</a>
+          <a class="navText-link-hover" href="/books">Books</a>
+          <a class="navText-link-hover" href="/movies">Movies</a>
+          <a class="navText-link-hover" href="/purchases">Purchases</a>
+        {{/if}}
+      </div>
+
+      {{!-- <div class="navigationItems">
+        {{#if currentUser}}
+          <a class="navText-link-hover" href="/customers">Customers</a>
+          <a class="navText-link-hover" href="/books">Books</a>
+          <a class="navText-link-hover" href="/movies">Movies</a>
+          <a class="navText-link-hover" href="/purchases">Purchases</a>
+        {{/if}}
+      </div> --}}
+
+      <div class="loginItems">
+        {{#unless currentUser}}
+          <a class="navText-link-hover" href="/auth/signup"> <b>Sign up</b> </a>
+          <a class="navText-link-hover" href="/auth/login"> <b>Login</b> </a>
+        {{/unless}}
+
+        {{#if currentUser}}
+          <a class="navText-link-hover" href="/auth/logout"><b>Logout</b></a>
+          <a class="navText-link-hover" href="/auth/profile"> <b>Profile</b></a>
+        {{/if}}  
+      </div>
+
+    </nav>
+
+    {{{body}}}
+
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>

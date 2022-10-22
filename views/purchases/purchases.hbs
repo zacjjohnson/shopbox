@@ -1,0 +1,43 @@
+{{#if currentUser}}
+<main class="content">
+    <div class="page-heading">
+        <h1>Purchase History</h1>
+        <button class="new-invoice-btn"><a href="/purchases/create">New Invoice</a></button>
+    </div>
+
+    <div class="page-list-heading">
+        
+        <div class="list-head" id="name">
+            <p>Customer Name</p>
+        </div>
+
+        <div class="list-head" id="email">
+            <p>Invoice #</p>
+        </div>
+
+        <div class="list-head">
+            <p> </p>
+        </div>
+
+    </div>
+
+    {{#each purchases}}
+    <div class="list-actual-display">
+
+        <div class="actual1">
+            <p>{{customers.firstName}} {{customers.lastName}}</p>
+        </div>
+
+        <div class="actual2">
+            <p>{{invoiceId}}</p>
+        </div>
+
+        <div class="actual3">
+            <p> <a class="details-link" href="/purchases/{{_id}}">See order details</a></p>
+        </div> 
+
+    </div>
+{{/each}}
+    
+</main>
+{{/if}}
